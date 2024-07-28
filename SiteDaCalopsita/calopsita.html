@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Site do Gato </title>
+    <meta charset="utf-8"/>
+
+    <style>
+    .azul{
+        background-color: cyan;
+        width: 10vw;
+        height: 10vw;
+        display: inline-block;
+    }
+
+    .vermelho{
+        width: 10vw;
+        height: 10vw;
+        display: inline-block;
+    }
+    </style>
+</head>
+
+<body>
+    <span id="teste" class="azul" onclick="alternar()"></span>
+    </br></br>
+    <a href="../index.html"><h3>voltar para o zoológico</h3></a>
+</body>
+
+<script>
+    function alternar()
+    {
+        if(document.getElementById("teste").className == "azul")
+        {
+            document.getElementById("teste").className = "vermelho";
+            document.getElementById("teste").innerHTML = "<img src=\"./calopsita.jpeg\" height=\"100%\" width=\"100%\"/>";
+        }
+        
+        else if(document.getElementById("teste").className == "vermelho")
+        {
+            document.getElementById("teste").className = "azul";
+            document.getElementById("teste").innerHTML = "";
+        }
+    }
+</script>
+</html>
